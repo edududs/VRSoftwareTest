@@ -40,7 +40,7 @@ How to run (with uv)
 1. Install dependencies (Python 3.10+)
 
 ```
-uv pip install -e .[dev]
+uv sync --extra dev
 ```
 
 2. Start the API (consumers start on app startup)
