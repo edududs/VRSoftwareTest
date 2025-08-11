@@ -37,10 +37,11 @@ QUEUE_NAMESPACE=local
 
 How to run (with uv)
 
-1. Install dependencies (Python 3.10+)
+1. Install dependencies and install the local package in editable mode (Python 3.10+)
 
 ```
 uv sync --extra dev
+uv pip install -e .
 ```
 
 2. Start the API (consumers start on app startup)
@@ -58,6 +59,12 @@ Tests
 
 ```
 uv run pytest
+```
+
+Note: If you prefer not to install in editable mode, run tests with the project root on PYTHONPATH:
+
+```
+uv run env PYTHONPATH=. pytest
 ```
 
 Test coverage details
